@@ -1,0 +1,36 @@
+schemaVersion: 1
+repository: https://github.com/klierbyck/xiaobai-skills.git
+skillRoot: skills
+installPolicy:
+  noSkillSpecified: list_and_ask
+  skillSpecified: install_only_requested
+  allRequested: install_all
+  unknownSkill: list_and_ask
+skills:
+  - id: image-gen
+    path: skills/image-gen
+    entrypoint: SKILL.md
+    readme: README.md
+    description: >-
+      通过可配置的图片 API 完成文生图、参考图生图和持续图片编辑，支持
+      OpenAI Images 与 Gemini generateContent 兼容接口。
+
+  - id: media-transcriber
+    path: skills/media-transcriber
+    entrypoint: SKILL.md
+    readme: README.md
+    description: >-
+      完整处理本地视频或音频，生成忠实原意的无时间戳书面稿，并保留原始
+      ASR、字幕、音轨和相关证据。
+
+  - id: skillsvc-image
+    path: skills/skillsvc-image
+    entrypoint: SKILL.md
+    readme: README.md
+    description: >-
+      使用 Skillsvc 图片 API 进行文生图、参考图生图、持续编辑，以及文章、
+      微信公众号、小红书和贴图号等场景的配图生成。
+    bundledModules:
+      - gzh-image
+      - human-writing
+      - xhs-image

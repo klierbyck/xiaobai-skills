@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.skillsvc-image/
+.DS_Store
+
+generated_images/
+generated-images/
+cover-image/
+wechat-article/
+image-cards/
+
+__pycache__/
+*.py[cod]
+
+# Local historical audit artifacts
+/reports/skill-audit-2026-09-08/
